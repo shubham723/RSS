@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "module": "esnext",
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js"
