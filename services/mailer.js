@@ -18,7 +18,7 @@ export const mailer = (text) => {
         from: process.env.EMAIL,
         to: process.env.TO,
         subject: text?.title,
-        html: `<p>${text?.title}</p><br/><br/><p>${text?.link}</p><br/><br/><p>${text?.content}</p>`
+        html: `<p>${text?.title}</p><br/><p>${text?.link}</p><br/><p>${text?.content}</p>`
     };
     
     // Send email
