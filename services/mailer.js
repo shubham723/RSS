@@ -1,7 +1,6 @@
 import nodemailer from 'nodemailer';
 
 export const mailer = (text) => {
-    console.log('text', process.env);
     // Create a transporter object using SMTP with Gmail
     const transporter = nodemailer.createTransport({
         service: 'gmail',
