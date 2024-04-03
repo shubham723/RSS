@@ -1,8 +1,8 @@
-import cron from 'node-cron';
-import { rssGenerator } from './rss.js';
+const cron = require('node-cron');
+const rssGenerator = require('./rss.js');
 
 (() => {
-    cron.schedule('*/5 * * * *', () => {
+    cron.schedule('*/4 * * * *', () => {
         console.log('running job');
         rssGenerator();
     });

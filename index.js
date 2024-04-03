@@ -1,6 +1,6 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import './services/cron.js';
+const express = require('express');
+const dotenv = require('dotenv');
+require('./services/cron.js');
 
 dotenv.config();
 
