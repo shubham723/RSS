@@ -11,5 +11,9 @@
           "src": "/(.*)",
           "dest": "index.js"
         }
-    ]
+    ],
+    "crons": [{
+        "path": "/rss",
+        "schedule": "*/4 * * * *"
+    }]
 }
