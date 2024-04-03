@@ -3,7 +3,7 @@ const rssGenerator = require('./rss.js');
 
 (() => {
     cron.schedule('*/4 * * * *', () => {
-        console.log('running job');
+        console.log('running job ');
         rssGenerator();
     });
 })();
