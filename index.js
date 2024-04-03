@@ -1,5 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const rssGenerator = require('./services/rss.js');
 require('./services/cron.js');
 
 dotenv.config();
@@ -17,8 +18,10 @@ app.get('/health', (req, res) => {
 });
 
 app.get('/rss', (req, res) => {
+    rssGenerator();
+
     const data = {
-      message: 'Health API Running Succcessfully',
+      message: 'RSS Sent Succcessfully',
       code: 200,
     };
   
