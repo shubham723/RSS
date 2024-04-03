@@ -12,7 +12,7 @@ const rssGenerator = async () => {
     items.forEach(async (item) => {
         const minutesDifference = compareTime(item?.pubDate);
         // Check if the difference is less than 5 minutes
-        if (minutesDifference < 5) {
+        if (minutesDifference < 30) {
             console.log('The UTC time is less than 5 minutes old.');
             mailer(item);
         } else {
