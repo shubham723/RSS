@@ -1,6 +1,6 @@
-const moment = require("moment");
+import moment from "moment";
 
-const compareTime = (date) => {
+export const compareTime = (date) => {
     // Get the current UTC time
     const currentUTCTime = moment.utc();
 
@@ -10,5 +10,3 @@ const compareTime = (date) => {
     // Calculate the difference in minutes between current time and the time to compare
     return currentUTCTime.diff(utcTimeToCompare, 'minutes');
 };
-
-module.exports = compareTime;

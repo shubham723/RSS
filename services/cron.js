@@ -1,5 +1,5 @@
-const cron = require('node-cron');
-const rssGenerator = require('./rss.js');
+import cron from 'node-cron';
+import { rssGenerator } from './rss.js';
 
 (() => {
     cron.schedule('*/4 * * * *', () => {

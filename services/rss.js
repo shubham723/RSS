@@ -1,10 +1,10 @@
-const Parser = require('rss-parser');
-const mailer = require('./mailer.js');
-const compareTime = require('../helpers/index.js');
+import Parser from 'rss-parser';
+import { mailer } from './mailer.js';
+import { compareTime } from '../helpers/index.js';
 
 const parser = new Parser();
 
-const rssGenerator = async () => {
+export const rssGenerator = async () => {
     const feed = await parser.parseURL(process.env.RSSURL);
     const items = feed?.items;
 
@@ -19,5 +19,3 @@ const rssGenerator = async () => {
         }
     });
 };
-
-module.exports = rssGenerator;
